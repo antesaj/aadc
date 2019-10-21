@@ -1,8 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import Header from "./components/Header";
 
 const useStyles = makeStyles(
+  // Styles
   theme => ({
     root: {
       padding: theme.spacing(3, 2)
@@ -20,7 +22,7 @@ function App() {
   return (
     <div>
       <Paper className={classes.root}>
-        <h1>AADC</h1>
+        <Header />
       </Paper>
     </div>
   );
