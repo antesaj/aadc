@@ -3,7 +3,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,6 +13,9 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
     marginRight: theme.spacing(2)
+  },
+  link: {
+    margin: theme.spacing(1)
   }
 }));
 
@@ -44,8 +49,20 @@ const MainMenu = props => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>About Me</MenuItem>
-        <MenuItem onClick={handleClose}>Blog</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/" className={classes.root}>
+            Home
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/about">About Me</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <a href="http://www.thedevstop.com">Blog</a>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/reading">What I'm Reading</Link>
+        </MenuItem>
       </Menu>
     </div>
   );
