@@ -1,6 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-const key = require("./key");
 const routes = require("./routes/routes");
 
 let router = express.Router();
