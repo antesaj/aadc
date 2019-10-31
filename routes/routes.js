@@ -7,6 +7,7 @@ module.exports = (app, router) => {
 
   // TODO: Remove test route.
   router.route("/test").get(controller.handleTest);
+  router.route("/reading").get(controller.getReading);
   app.use("/api", router);
 
   // Handle production environment

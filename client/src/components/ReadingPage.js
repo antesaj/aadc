@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import ReadingCard from "./ReadingCard";
 
 const useStyles = makeStyles({
   card: {
@@ -12,23 +13,17 @@ const useStyles = makeStyles({
   }
 });
 
+const renderCards = () => {
+  const ids = [1, 2, 3, 4, 5];
+  const cards = ids.map(id => <ReadingCard key={id} />);
+
+  return cards;
+};
+
 const ReadingPage = props => {
   const classes = useStyles();
 
-  return (
-    <div>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="h5">Stuff on this card.</Typography>
-        </CardContent>
-      </Card>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="h5">Stuff on this card.</Typography>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  return <div>{renderCards()}</div>;
 };
 
 export default ReadingPage;
