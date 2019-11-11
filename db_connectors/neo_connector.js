@@ -20,27 +20,43 @@ const closeSession = session => {
   });
 };
 
-const addBook = (title, genre, concept) => {
-  // TODO: Need a method to construct these queries based on inputs, which
-  //  can be lists of values (except title).
+const addBook = (title, genres, concepts) => {
   const session = getSession();
-  session
-    .run(
-      `CREATE (a:Book {title: $title})-[:HAS_GENRE]->
-        (b:Genre {name: $name})-[:IS_IN]->(a)-[:HAS_CONCEPT]->
-        (c:Concept {concept: $concept})-[:IS_IN]->(a) RETURN a,b,c`,
-      {
-        title: title,
-        name: genre,
-        concept: concept
-      }
-    )
-    .then(result => {
-      closeSession(session);
-    });
-};
 
-addBook("The Selfish Gene", "Biology", "Memes");
+  session
+    .run(`CREATE (a:Book {title: $title}) RETURN a`, { title: title })
+    .then(result => console.log(result));
+
+  genres.forEach(genre => {
+    session
+      .run(`CREATE (g:Genre {name: $name}) RETURN g`, { name: genre })
+      .then(
+        session
+          .run(
+            `MATCH (b:Book {title: ${title}}), (g:Genre {name: ${genre}}),
+              CREATE (b)-[:HAS_GENRE]->(g)-[:IS_IN]->(b)`
+          )
+          .then(result => {
+            console.log(result);
+          })
+      );
+  });
+
+  concepts.forEach(concept => {
+    session
+      .run(`CREATE (c:Concept {name: $name}) RETURN c`, { name: concept })
+      .then(
+        session
+          .run(
+            `MATCH (b:Book {title: ${title}}), (c:Concept {name: ${concept}}),
+              CREATE (b)-[:HAS_CONCEPT]->(c)-[:IS_IN]->(b)`
+          )
+          .then(result => {
+            console.log(result);
+          })
+      );
+  });
+};
 
 module.exports = {
   addBook
