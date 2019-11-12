@@ -6,7 +6,7 @@ import About from "./components/About";
 import ReadingPage from "./components/ReadingPage";
 import Container from "@material-ui/core/Container";
 import blue from "@material-ui/core/colors/blue";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import Image from "./assets/bg_cascades.jpg";
 
 const useStyles = makeStyles(
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Paper className={classes.root} square={false}>
           <Header />
           <Paper className={classes.container} square={false}>
@@ -48,7 +48,7 @@ function App() {
             </Switch>
           </Paper>
         </Paper>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
