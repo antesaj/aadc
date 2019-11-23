@@ -12,7 +12,8 @@
 }
 
 html,body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     line-height: 1.8em;
 }
 
@@ -47,4 +48,29 @@ h1,h2,h3 {
 #navbar ul li {
     float: left;
     padding: 20px;
+}
+
+#navbar ul li:hover {
+    background: #bea89e;
+}
+
+#header-splash {
+    background: url('../assets/bg_me.jpg') no-repeat
+     center center/cover;
+    height: 600px;
+}
+
+#header-splash-left {
+    width: 70%;
+    padding: 90px 0 0 100px;
+}
+
+#header-splash-left h1 {
+    font-size: 40px;
+    color: #283044;
+}
+
+#header-splash-left p {
+    font-size: 18px;
+    padding-top: 10px;
 }

@@ -15,6 +15,14 @@ const Header = props => {
           </ul>
         </div>
       </nav>
+      <section id='header-splash'>
+        <div id='header-splash-left'>
+          <h1>Andrew Antes</h1>
+          <p>I'm a <strong>software engineer</strong> that's focused on learning new ways to build
+            high-quality, scalable, and maintainable software systems.
+          </p>
+        </div>
+      </section>
     </header>
   );
 };
