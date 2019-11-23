@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+.clr {
+    clear: both;
+}
+
 html,body {
     font-family: Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -72,5 +76,17 @@ h1,h2,h3 {
 
 #header-splash-left p {
     font-size: 18px;
-    padding-top: 10px;
+    padding: 10px 0 20px 0;
+}
+
+#header-splash-button {
+    text-decoration: none;
+    padding: 10px;
+    background: #bea89e;
+    color: #283044;
+    border-radius: 5px;
+}
+
+#header-splash-button:hover {
+    background: #8b786d;
 }

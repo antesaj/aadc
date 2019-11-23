@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../css/Style.css';
 
 const Header = props => {
@@ -21,8 +22,10 @@ const Header = props => {
           <p>I'm a <strong>software engineer</strong> that's focused on learning new ways to build
             high-quality, scalable, and maintainable software systems.
           </p>
+          <Link to='/about' id='header-splash-button'>Learn More</Link>
         </div>
       </section>
+      <div className='clr'></div>
     </header>
   );
 };
