@@ -1,41 +1,21 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import MainMenu from "./MainMenu";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(
-  theme => ({
-    root: {
-      flexGrow: 1
-    },
-    menuButton: {
-      marginRight: theme.spacing(2)
-    },
-    title: {
-      flexGrow: 1
-    }
-  }),
-  {
-    name: "header_component"
-  }
-);
+import '../css/Style.css';
 
 const Header = props => {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" square={false}>
-        <Toolbar>
-          <MainMenu />
-          <Typography variant="h6" className={classes.title}>
-            Andrew Antes - Personal Website
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <header>
+      <nav id='navbar'>
+        <div className='container'>
+          <h1 className='logo'>AADC</h1>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 };
 

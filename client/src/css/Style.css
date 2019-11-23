@@ -1,0 +1,50 @@
+/* 283044 Dark Blue
+   78a1bb Light Blue
+   ebe5ee Light eggshellish
+   bea89e Light Brown
+   8b786d Darker but still light brown
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8em;
+}
+
+h1,h2,h3 {
+    padding-bottom: 15px;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+#navbar {
+    background: #283044;
+    color: #ebe5ee;
+    overflow: auto;
+}
+
+#navbar h1 {
+    padding-top: 20px;
+    float: left;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+    padding: 20px;
+}
