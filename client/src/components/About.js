@@ -10,11 +10,11 @@ const Header = props => {
                 <i class="fas fa-cogs fa-3x"></i>
                 <h3>Backend Development</h3>
             </div>
-            <div className='box bg-brown'>
+            <div className='box bg-brown text-secondary'>
                 <i class="fas fa-code fa-3x"></i>
                 <h3>Frontend Development</h3>
             </div>
-            <div className='box'>
+            <div className='box bg-blue'>
                 <i class="fas fa-sitemap fa-3x"></i>
                 <h3>DevOps | CI/CD | Testing</h3>
             </div>

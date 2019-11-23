@@ -101,16 +101,27 @@ h1,h2,h3 {
 #about-section {
     background: #283044;
     color: #ebe5ee;
-    height: 500px;
 }
 
 .box {
     float: left;
     width: 33.3%;
-    padding: 50px;
+    padding: 50px 0 300px 0;
     text-align: center;
+}
+
+.bg-brown {
+    background: #bea89e;
+}
+
+.bg-blue {
+    background: #283044;
 }
 
 #about-section .box i {
     padding-bottom: 20px;
+}
+
+.text-secondary {
+    color: #283044;
 }
