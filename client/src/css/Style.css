@@ -95,3 +95,22 @@ h1,h2,h3 {
 #header-splash-button:hover {
     background: #8b786d;
 }
+
+/* About Section */
+
+#about-section {
+    background: #283044;
+    color: #ebe5ee;
+    height: 500px;
+}
+
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+#about-section .box i {
+    padding-bottom: 20px;
+}
