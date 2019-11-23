@@ -17,13 +17,15 @@ const Header = props => {
         </div>
       </nav>
       <section id='header-splash'>
-        <div id='header-splash-left'>
-          <h1>Andrew Antes</h1>
-          <p>I'm a <strong>software engineer</strong> that's focused on learning new ways to build
-            high-quality, scalable, and maintainable software systems.
-          </p>
-          <Link to='/about' id='header-splash-button'>Learn More</Link>
-        </div>
+          <div id='header-splash-container'>
+          <div id='header-splash-left'>
+            <h1>Andrew Antes</h1>
+            <p>I'm a <strong>software engineer</strong> that's focused on learning new ways to build
+              high-quality, scalable, and maintainable software systems.
+            </p>
+            <Link to='/about' id='header-splash-button'>Learn More</Link>
+          </div>
+          </div>
       </section>
       <div className='clr'></div>
     </header>
