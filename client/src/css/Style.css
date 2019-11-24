@@ -39,6 +39,16 @@ h1,h2,h3 {
     overflow: auto;
 }
 
+#logo {
+    background: url('../assets/mountain.png');
+    color: #ebe5ee;
+}
+
+#navbar i {
+    padding-top: 20px;
+}
+
+
 #navbar h1 {
     padding-top: 20px;
     float: left;
@@ -55,7 +65,7 @@ h1,h2,h3 {
 }
 
 #navbar ul li:hover {
-    background: #bea89e;
+    background: #808080;
 }
 
 #header-splash {
@@ -67,11 +77,6 @@ h1,h2,h3 {
 #header-splash-container {
     max-width: 1200px;
     margin: auto;
-}
-
-#header-splash-left {
-    width: 45%;
-    padding: 90px 0 0 100px;
 }
 
 #header-splash-left h1 {
@@ -87,13 +92,13 @@ h1,h2,h3 {
 #header-splash-button {
     text-decoration: none;
     padding: 10px;
-    background: #bea89e;
+    background: #808080;
     color: #283044;
     border-radius: 5px;
 }
 
 #header-splash-button:hover {
-    background: #8b786d;
+    background: #909090;
 }
 
 /* About Section */
@@ -103,20 +108,29 @@ h1,h2,h3 {
     color: #ebe5ee;
 }
 
-.box {
-    float: left;
-    width: 33.3%;
-    padding: 50px 0;
-    text-align: center;
-    box-sizing: border-box;
+@media (min-width: 501px) {
+    .box {
+        float: left;
+        width: 33.3%;
+        padding: 50px 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #header-splash-left {
+        width: 45%;
+        padding: 90px 0 0 100px;
+    }
 }
+
+
 
 .box ul li {
     list-style: none;
 }
 
 .bg-brown {
-    background: #bea89e;
+    background: #808080;
 }
 
 .bg-blue {
@@ -129,4 +143,19 @@ h1,h2,h3 {
 
 .text-secondary {
     color: #283044;
+}
+
+@media (max-width: 500px) {
+    .box {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #header-splash-left {
+        width: 100%;
+        padding: 50px;
+        text-align: center;
+    }
 }
